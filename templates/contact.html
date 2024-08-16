@@ -20,10 +20,10 @@
 <body>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-about-me w-nav">
     <div class="container-2 w-container">
-      <div class="title-about-me">Precizion Quality Assurance</div>
+      <div class="title-about-me" onclick="location.href='{{ url_for('index') }}';" style="cursor: pointer;" >Precizion Quality Assurance</div>
       <nav role="navigation" class="nav-menu w-nav-menu">
-        <a href="#" class="nav-link-about-me w-nav-link">Who am I and what I do</a>
-        <a href="#" class="nav-link-about-me w-nav-link">My expertise</a>
+        <a href="{{ url_for('about') }}" class="nav-link-about-me w-nav-link">Who am I and what I do</a>
+        <a href="{{ url_for('expertise') }}" class="nav-link-about-me w-nav-link">My expertise</a>
         <a href="#" class="nav-link-about-me selected-text w-nav-link">Contact</a>
       </nav>
       <div class="menu-button w-nav-button">
@@ -35,7 +35,7 @@
     <div class="div-block-49">
       <div class="text-block-45">Contact me</div>
       <div class="text-block-46">Most robust software can hide vulnerabilities. I&#x27;m here to find and strengthen them.</div>
-      <div class="div-block-51"><img src="static/images/Picture-Defend.png" loading="lazy" alt="" class="image-9"></div>
+      <div class="div-block-51"><img src="static/dimages/Picture-Defend.png" loading="lazy" alt="" class="image-9"></div>
     </div>
     <div class="w-layout-blockcontainer container-3 w-container">
       <div class="text-block-47">Interested in enhancing the quality and security of your software? Contact me today to create solutions tailored to your needs. I am available via email or by filling out the contact form:</div>

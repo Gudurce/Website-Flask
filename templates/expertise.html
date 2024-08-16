@@ -20,11 +20,11 @@
 <body>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
     <div class="container-2 w-container">
-      <div class="title-main">Precizion Quality Assurance</div>
+      <div class="title-main" onclick="location.href='{{ url_for('index') }}';" style="cursor: pointer;" >Precizion Quality Assurance</div>
       <nav role="navigation" class="nav-menu w-nav-menu">
-        <a href="#" class="nav-link-main w-nav-link">Who am I and what I do</a>
+        <a href="{{ url_for('about') }}" class="nav-link-main w-nav-link">Who am I and what I do</a>
         <a href="#" class="nav-link-main selected-text w-nav-link">My expertise</a>
-        <a href="#" class="nav-link-main w-nav-link">Contact</a>
+        <a href="{{ url_for('contact') }}" class="nav-link-main w-nav-link">Contact</a>
       </nav>
       <div class="menu-button w-nav-button">
         <div class="w-icon-nav-menu"></div>
