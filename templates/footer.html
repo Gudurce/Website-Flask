@@ -1,0 +1,35 @@
+<div class="div-precizion-qa">
+    <div class="div-block-41">
+      <div class="text-block-33">Precizion Quality Assurance</div>
+    </div>
+    <div class="div-block-42">
+      <div class="text-block-34">Let&#x27;s innovate together.<br>Book a call with me.</div>
+      <div class="div-block-43">
+        <div class="div-block-44">
+          <div class="text-block-35">Navigate</div>
+          <div class="text-block-36" onclick="location.href='{{ url_for('about') }}';" style="cursor: pointer">About me</div>
+          <div class="text-block-37" onclick="location.href='{{ url_for('expertise') }}';" style="cursor: pointer">My expertise</div>
+        </div>
+        <div class="div-block-44">
+          <div class="text-block-35">Contact</div>
+          <div class="text-block-36" onclick="location.href='{{ url_for('contact') }}';" style="cursor: pointer">Email</div>
+          <div class="text-block-37" onclick="window.open('https://www.linkedin.com/in/branislav-guduric/', '_blank');" style="cursor: pointer;">Linkedin</div>
+        </div>
+      </div>
+    </div>
+    <a href="{{ url_for('contact') }}" class="schedule-a-call w-button">Schedule a call</a>
+    <div class="line"></div>
+    <div class="div-block-45">
+      <div class="text-block-38">Based in Serbia, Novi Sad, Current time in Serbia <span id="current_time"></span></div>
+      <div class="text-block-39">All Rights Reserved</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function updateTime() {
+        var serbia_time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Belgrade", hour: '2-digit', minute: '2-digit', hour12: false });
+        document.getElementById('current_time').textContent = serbia_time;
+    }
+    updateTime();
+    setInterval(updateTime, 60000);
+</script>
