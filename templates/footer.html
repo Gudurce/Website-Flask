@@ -20,15 +20,24 @@
     <a href="{{ url_for('contact') }}" class="schedule-a-call w-button">Schedule a call</a>
     <div class="line"></div>
     <div class="div-block-45">
-      <div class="text-block-38">Based in Serbia, Novi Sad, Current time in Serbia <span id="current_time"></span></div>
+      <div class="text-block-38">Based in Serbia, Novi Sad, Local time: <span id="current_time"></span></div>
       <div class="text-block-39">All Rights Reserved</div>
     </div>
 </div>
 
 <script type="text/javascript">
     function updateTime() {
-        var serbia_time = new Date().toLocaleString("en-GB", { timeZone: "Europe/Belgrade", hour: '2-digit', minute: '2-digit', hour12: false });
-        document.getElementById('current_time').textContent = serbia_time;
+        var serbia_time = new Date().toLocaleString("en-GB", { 
+            timeZone: "Europe/Belgrade", 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            hour12: false });
+        
+        var hours = parseInt(serbia_time.split(':')[0], 10);
+        
+        var icon = (hours >= 7 && hours < 19) ? '☀' : '🌑';
+        
+        document.getElementById('current_time').textContent = serbia_time + ' ' + icon;
     }
     updateTime();
     setInterval(updateTime, 60000);
