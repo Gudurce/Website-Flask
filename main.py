@@ -53,4 +53,4 @@ def send_email():
         return redirect(url_for('index'))
     
 if __name__ == "__main__":
-    app.run()
+    app.run(host='68.183.222.38', port=80)
